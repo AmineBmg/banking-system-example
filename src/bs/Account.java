@@ -4,7 +4,7 @@ public class Account {
 	
 	private  String ID;
 	private  double balance; //mandatory
-	
+	private double limit; //limit on account.
 	
 	public Account(String id, double intial) {
 		this.ID= id;
@@ -15,6 +15,15 @@ public class Account {
 		return this.balance;
 	}
 	
+	public void setLimit(double limit) {
+		this.limit = limit;
+	}
+	
+	public double getLimit() {
+		return limit;
+	}
+	
+	
 	//deposit feature
 	public void deposit(double amount) {
 		balance +=amount;
@@ -24,7 +33,7 @@ public class Account {
 	
 	//withdraw without limit
 	public boolean withdraw(double amount) {
-		if(balance >= amount) {
+		if(balance >= amount+ limit) {
 			balance = balance - amount;
 			return true;
 		}	
