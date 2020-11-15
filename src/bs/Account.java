@@ -4,7 +4,7 @@ public class Account {
 	
 	private  String ID;
 	private  double balance; //mandatory
-	private double limit; //limit on account.
+	private double limitOnAccount; //limit on account.
 	
 	public Account(String id, double intial) {
 		this.ID= id;
@@ -16,11 +16,11 @@ public class Account {
 	}
 	
 	public void setLimit(double limit) {
-		this.limit = limit;
+		this.limitOnAccount = limit;
 	}
 	
 	public double getLimit() {
-		return limit;
+		return limitOnAccount;
 	}
 	
 	
@@ -41,7 +41,7 @@ public class Account {
 	}
 
 	public boolean isSufficient(double amount) {
-		return balance >= amount+ limit;
+		return balance >= amount+ limitOnAccount;
 	}
 	
 
