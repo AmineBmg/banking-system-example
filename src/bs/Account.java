@@ -33,11 +33,15 @@ public class Account {
 	
 	//withdraw without limit
 	public boolean withdraw(double amount) {
-		if(balance >= amount+ limit) {
+		if(isSufficient(amount)) {
 			balance = balance - amount;
 			return true;
 		}	
 		return false;
+	}
+
+	public boolean isSufficient(double amount) {
+		return balance >= amount+ limit;
 	}
 	
 
