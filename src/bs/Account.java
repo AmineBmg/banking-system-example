@@ -2,12 +2,12 @@ package bs;
 
 public class Account {
 	
-	private  String ID;
+	private  String custumerID;
 	private  double balance; //mandatory
 	private double limitOnAccount; //limit on account.
 	
 	public Account(String id, double intial) {
-		this.ID= id;
+		this.custumerID= id;
 		this.balance=intial;
 	}
 		
@@ -27,7 +27,7 @@ public class Account {
 	//deposit feature
 	public void deposit(double amount) {
 		balance +=amount;
-		System.out.println(" Amount: "+ amount +" added to the account: "+ID +"\n Total "+ getBalance()+amount);
+		System.out.println(" Amount: "+ amount +" added to the account: "+custumerID +"\n Total "+ getBalance()+amount);
 	}
 		
 	
