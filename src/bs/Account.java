@@ -32,7 +32,7 @@ public class Account {
 		
 	
 	//withdraw without limit
-	public boolean withdraw(double amount) {
+	public boolean withdrawWithLimit(double amount) {
 		if(isSufficient(amount)) {
 			balance = balance - amount;
 			return true;

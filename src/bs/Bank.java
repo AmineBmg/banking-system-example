@@ -14,7 +14,7 @@ public class Bank {
 	}
 	
 	public void withdrawFromAccount(String id, double amount) {
-		if (acc.withdraw(amount)) {
+		if (acc.withdrawWithLimit(amount)) {
 			System.out.println("the ammount "+ amount +" has been withdraw successfuly ...");
 		}
 		else {
